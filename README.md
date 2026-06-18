@@ -112,7 +112,7 @@ PAST_EXPERIENCE_MAX_TIMEOUTS=3
 
 ## Run
 construct a .env first
-use linus
+use linux
 
 Console mode:
 
