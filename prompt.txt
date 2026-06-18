@@ -1,0 +1,97 @@
+Read `requirements.txt` and review the entire repository before making any changes.
+
+Project Goal
+Implement an AI Mock Interview demo using LiveKit Agents that supports two interview stages:
+
+1. Self Introduction
+2. Past Experience
+
+The implementation must use LiveKit's recommended multi-agent patterns where appropriate.
+
+Repository References:
+
+* `requirements.txt`
+* Existing project files
+* https://github.com/livekit/agents
+
+Your Tasks
+
+1. Repository Analysis
+
+   * Analyze the current project structure.
+   * Identify the entry point(s).
+   * Identify existing agent architecture, workflows, and state management.
+   * Determine how LiveKit Agents are currently being used.
+   * Identify any missing components required for the mock interview workflow.
+
+2. Architecture Proposal
+
+   * Design a production-quality solution for:
+
+     * Self Introduction stage
+     * Past Experience stage
+     * Stage transition handling
+     * Timeout fallback handling
+   * Favor correctness, maintainability, reliability, and clarity over minimizing code size.
+
+3. State Management Design
+
+   * Use an explicit InterviewState enum and state machine.
+   * Ensure only one interview stage can be active at a time.
+   * Prevent:
+
+     * duplicate transitions
+     * repeated prompts
+     * simultaneous agent responses
+     * interruption loops
+     * race conditions between agents
+
+4. Transition Design
+
+   * Explain how the system will determine when to move from:
+
+     * Self Introduction → Past Experience
+   * Explain how transition decisions are made.
+   * Explain how conflicts are prevented.
+
+5. Fallback Mechanism Design
+
+   * Design a configurable time-based fallback mechanism.
+   * If the normal transition trigger does not occur within the timeout period, the workflow should automatically advance.
+   * Explain:
+
+     * timeout handling
+     * retry behavior
+     * logging strategy
+     * edge cases
+
+6. File-Level Plan
+
+   * List every file that should be:
+
+     * created
+     * modified
+     * left unchanged
+   * For each file, explain its purpose.
+
+7. Architecture Diagram
+
+   * Produce a clear architecture diagram showing:
+
+     * interview flow
+     * agents
+     * state machine
+     * transition logic
+     * fallback mechanism
+
+8. Implementation Plan
+
+   * Provide a step-by-step implementation plan.
+   * Estimate risks and potential integration challenges.
+
+IMPORTANT:
+
+* Do NOT generate or modify any code yet.
+* Do NOT create files yet.
+* First provide the full architecture review and implementation plan.
+* Wait for approval before making any code changes.

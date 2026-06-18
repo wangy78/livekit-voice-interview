@@ -1,0 +1,4 @@
+.env
+.venv_linux/
+__pycache__/
+# Add any other messy/sensitive files you want to keep locally

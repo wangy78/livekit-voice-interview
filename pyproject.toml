@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mock-interview-livekit"
+version = "0.1.0"
+description = "AI mock interview demo using LiveKit Agents."
+requires-python = ">=3.10"
+dependencies = [
+  "livekit-agents",
+  "python-dotenv",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
